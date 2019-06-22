@@ -1,0 +1,23 @@
+org:
+    hibernate:
+        dialect:
+            PostgreSQLDialect: 
+spring:
+    database:
+        driverClassName: org.postgresql.Driver
+    datasource:
+        password: biblio
+        platform: biblio
+        testWhileIdle: true
+        url: jdbc:postgresql://localhost:5432/biblio
+        username: postgres
+        validationQuery: SELECT 1
+    jpa:
+        database: POSTGRESQL
+        properties:
+            hibernate:
+                dialect: 
+        show-sql: true
+tracer:
+    property: I AM THE DEFAULT
+

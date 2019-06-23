@@ -1,14 +1,16 @@
 spring:
-    driverClassName: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
   datasource:
     username: postgres
     password: postgres
     url: jdbc:postgresql://localhost:5432/biblio
-    validationQuery: SELECT 1
-  jpa:
-    hibernate:
-      ddl-auto: create
-    show-sql: true
 tracer:
   property: I AM THE DEFAULT
 

@@ -1,7 +1,3 @@
-org:
-    hibernate:
-        dialect:
-            PostgreSQLDialect: 
 spring:
     database:
         driverClassName: org.postgresql.Driver
@@ -16,7 +12,7 @@ spring:
         database: POSTGRESQL
         properties:
             hibernate:
-                dialect: 
+                dialect: org.hibernate.dialect.MySQL5Dialect
         show-sql: true
 tracer:
     property: I AM THE DEFAULT

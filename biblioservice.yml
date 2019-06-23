@@ -12,7 +12,7 @@ spring:
         database: POSTGRESQL
         properties:
             hibernate:
-                dialect: org.hibernate.dialect.MySQL5Dialect
+                dialect: org.hibernate.dialect.PostgreSQL9Dialect
         show-sql: true
 tracer:
     property: I AM THE DEFAULT

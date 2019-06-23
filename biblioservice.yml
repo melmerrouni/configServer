@@ -1,18 +1,12 @@
 spring:
-    database:
-        driverClassName: org.postgresql.Driver
     datasource:
-        password: biblio
-        platform: biblio
-        testWhileIdle: true
         url: jdbc:postgresql://localhost:5432/biblio
-        username: postgres
-        validationQuery: SELECT 1
+        username: biblio
+        password:
     jpa:
-        database: POSTGRESQL
         properties:
             hibernate:
-                dialect: org.hibernate.dialect.PostgreSQL9Dialect
+                dialect: org.hibernate.dialect.PostgreSQLDialect
         show-sql: true
 tracer:
     property: I AM THE DEFAULT

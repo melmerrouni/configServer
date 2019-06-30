@@ -1,0 +1,32 @@
+logging:
+  level:
+    com:
+      netflix:
+        descovery: OFF
+        eureka: OFF
+    org:
+      springframework:
+        security: DEBUG
+  pattern:
+    console: %clr(%d{yy-MM-dd E HH:mm:ss.SSS}){blue} %clr(%-5p) %clr(${PID}){faint} %clr(---){faint} %clr([%8.15t]){cyan} %clr(%-40.40logger{0}){blue} %clr(:){red} %clr(%m){faint}%n
+debug: true
+server:
+  port: ${PORT:${SERVER_PORT:0}}
+spring:
+  redis:
+    host: ${DOCKER_IP}
+  zipkin:
+    host: ${DOCKER_IP}
+  rabbitmq:
+    host: ${DOCKER_IP}
+  jpa:
+    generate-ddl: true
+  sleuth:
+    log:
+      json:
+        enabled: true
+info:
+  id: ${spring.application.name}
+endpoints:
+  shutdown:
+    enabled: true

@@ -1,3 +1,10 @@
-tracer:
-    property: reservation service
-
+server:
+  port: ${PORT:8000}
+  application:
+    name: api-reservation
+spring:
+  cloud:
+    stream:
+      bindings:
+        input: reservation
+  
